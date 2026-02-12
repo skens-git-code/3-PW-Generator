@@ -8,8 +8,9 @@
   ![Entropy](https://img.shields.io/badge/entropy-256%20bits-FF6B6B?style=for-the-badge)
   ![PWA](https://img.shields.io/badge/PWA-ready-blueviolet?style=for-the-badge)
   ![Zero](https://img.shields.io/badge/dependencies-Zero-34c759?style=for-the-badge)
-
+<div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=SF+Mono&weight=600&size=32&duration=2000&pause=800&color=007AFF&center=true&vCenter=true&width=600&height=70&lines=Encrypting...;Strengthening+shields...;Password+ready!" alt="Typing SVG" />
+</div>
 
   <br>
   
