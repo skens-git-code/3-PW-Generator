@@ -560,6 +560,20 @@
             }, 200);
         }
 
+        // Mouse parallax effect for background shapes
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.floating-shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 20;
+                const xOffset = (window.innerWidth / 2 - e.pageX) / speed;
+                const yOffset = (window.innerHeight / 2 - e.pageY) / speed;
+                shape.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+
         // Initialize settings
         function initializeSettings() {
             autoCopyCheckbox.checked = settings.autoCopy;
@@ -968,10 +982,18 @@
             });
         }
 
+        // Apply decode animation
+        function applyDecodeAnimation(element) {
+            element.classList.remove('decode-anim');
+            void element.offsetWidth; // Trigger reflow
+            element.classList.add('decode-anim');
+        }
+
         // Generate and display password
         function generateAndDisplayPassword() {
             const password = generatePassword();
             passwordDisplay.textContent = password;
+            applyDecodeAnimation(passwordDisplay);
             updateStrengthMeter(password);
             updateSecurityAudit();
 
@@ -988,6 +1010,7 @@
         function generateAndDisplayPassphrase() {
             const passphrase = generatePassphrase();
             passphraseDisplay.textContent = passphrase;
+            applyDecodeAnimation(passphraseDisplay);
 
             if (settings.autoCopy) {
                 copyToClipboard(passphrase);
@@ -998,6 +1021,7 @@
         function generateAndDisplayPatternPassword() {
             const password = generatePasswordFromPattern();
             patternPasswordDisplay.textContent = password;
+            applyDecodeAnimation(patternPasswordDisplay);
 
             if (settings.autoCopy) {
                 copyToClipboard(password);
