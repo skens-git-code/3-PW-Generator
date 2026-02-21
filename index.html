@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> CryptEns</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-</head> 
+</head>
 <!-- Loading Screen -->
+
 <body class="light-theme">
     <div id="loading-screen">
         <div class="loading-logo">
@@ -49,14 +51,14 @@
             <div class="card">
                 <h1>Password Generator</h1>
                 <p class="subtitle">Create strong and secure passwords with CryptEns</p>
-                
+
                 <div class="tabs">
                     <div class="tab active" data-tab="standard">Standard</div>
                     <div class="tab" data-tab="passphrase">Passphrase</div>
                     <div class="tab" data-tab="pattern">Pattern</div>
                     <div class="tab" data-tab="batch">Batch</div>
                 </div>
-                
+
                 <!-- Standard Password Tab -->
                 <div class="tab-content active" id="standard-tab">
                     <div class="password-display">
@@ -73,7 +75,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="options">
                         <div class="option-row">
                             <span class="option-label">Password Length</span>
@@ -82,42 +84,42 @@
                                 <input type="range" min="6" max="50" value="12" class="slider" id="length-slider">
                             </div>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="uppercase" checked>
                                 <span class="option-label">Uppercase Letters (A-Z)</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="lowercase" checked>
                                 <span class="option-label">Lowercase Letters (a-z)</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="numbers" checked>
                                 <span class="option-label">Numbers (0-9)</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="symbols">
                                 <span class="option-label">Symbols (!@#$%^&*)</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="exclude-similar">
                                 <span class="option-label">Exclude Similar Characters (1, l, I, 0, O)</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="no-repeating">
@@ -125,7 +127,7 @@
                             </label>
                         </div>
                     </div>
-                    
+
                     <div class="strength-meter">
                         <div class="strength-label">
                             <span>Password Strength</span>
@@ -136,7 +138,7 @@
                         </div>
                         <div class="entropy-display" id="entropy-display">Entropy: 0 bits</div>
                     </div>
-                    
+
                     <h3>Quick Templates</h3>
                     <div class="template-grid">
                         <div class="template-card" data-template="basic">
@@ -156,7 +158,7 @@
                             <div>All Characters</div>
                         </div>
                     </div>
-                    
+
                     <div class="buttons">
                         <button class="btn btn-primary" id="generate-btn">
                             <i class="fas fa-key"></i>
@@ -168,7 +170,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Passphrase Tab -->
                 <div class="tab-content" id="passphrase-tab">
                     <div class="password-display">
@@ -182,7 +184,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="options">
                         <div class="option-row">
                             <span class="option-label">Number of Words</span>
@@ -191,21 +193,21 @@
                                 <input type="range" min="3" max="8" value="4" class="slider" id="word-count-slider">
                             </div>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="capitalize" checked>
                                 <span class="option-label">Capitalize Words</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="include-numbers">
                                 <span class="option-label">Include Numbers</span>
                             </label>
                         </div>
-                        
+
                         <div class="option-row">
                             <label class="checkbox-container">
                                 <input type="checkbox" class="checkbox" id="include-symbols">
@@ -213,7 +215,7 @@
                             </label>
                         </div>
                     </div>
-                    
+
                     <div class="buttons">
                         <button class="btn btn-primary" id="generate-passphrase">
                             <i class="fas fa-dice"></i>
@@ -221,7 +223,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Pattern Tab -->
                 <div class="tab-content" id="pattern-tab">
                     <div class="password-display">
@@ -235,12 +237,14 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label class="form-label" for="pattern-input">Pattern (L=Letter, l=lowercase, U=Uppercase, n=Number, S=Symbol)</label>
-                        <input type="text" class="form-input" id="pattern-input" value="UllnnSllS" placeholder="Example: UllnnSllS">
+                        <label class="form-label" for="pattern-input">Pattern (L=Letter, l=lowercase, U=Uppercase,
+                            n=Number, S=Symbol)</label>
+                        <input type="text" class="form-input" id="pattern-input" value="UllnnSllS"
+                            placeholder="Example: UllnnSllS">
                     </div>
-                    
+
                     <div class="buttons">
                         <button class="btn btn-primary" id="generate-pattern">
                             <i class="fas fa-project-diagram"></i>
@@ -248,41 +252,41 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Batch Tab -->
                 <div class="tab-content" id="batch-tab">
                     <div class="form-group">
                         <label class="form-label" for="batch-count">Number of Passwords to Generate</label>
                         <input type="number" class="form-input" id="batch-count" value="5" min="1" max="20">
                     </div>
-                    
+
                     <div class="buttons">
                         <button class="btn btn-primary" id="generate-batch">
                             <i class="fas fa-layer-group"></i>
                             Generate Batch
                         </button>
                     </div>
-                    
+
                     <div class="batch-results" id="batch-results">
                         <!-- Batch results will appear here -->
                     </div>
                 </div>
             </div>
-            
+
             <!-- Security & History Card -->
             <div class="card">
                 <h2>Security & Management</h2>
-                
+
                 <div class="tabs">
                     <div class="tab active" data-tab="security">Security Audit</div>
                     <div class="tab" data-tab="history">Password History</div>
                     <div class="tab" data-tab="settings">Settings</div>
                 </div>
-                
+
                 <!-- Security Audit Tab -->
                 <div class="tab-content active" id="security-tab">
                     <div class="health-score" id="health-score">85%</div>
-                    
+
                     <div class="security-audit">
                         <h3>Password Health Check</h3>
                         <div class="audit-item">
@@ -298,7 +302,8 @@
                             <div>Contains numbers</div>
                         </div>
                         <div class="audit-item">
-                            <div class="audit-icon"><i class="fas fa-exclamation-circle" style="color: #ffcc00;"></i></div>
+                            <div class="audit-icon"><i class="fas fa-exclamation-circle" style="color: #ffcc00;"></i>
+                            </div>
                             <div>Could include symbols for extra security</div>
                         </div>
                         <div class="audit-item">
@@ -306,7 +311,7 @@
                             <div>No repeating characters detected</div>
                         </div>
                     </div>
-                    
+
                     <div class="buttons" style="margin-top: 20px;">
                         <button class="btn" id="audit-password">
                             <i class="fas fa-shield-alt"></i>
@@ -314,7 +319,7 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- History Tab -->
                 <div class="tab-content" id="history-tab">
                     <div class="history-title">
@@ -327,7 +332,7 @@
                         <!-- History items will be added here dynamically -->
                     </ul>
                 </div>
-                
+
                 <!-- Settings Tab -->
                 <div class="tab-content" id="settings-tab">
                     <div class="option-row">
@@ -336,21 +341,21 @@
                             <span class="option-label">Auto-copy to clipboard after generation</span>
                         </label>
                     </div>
-                    
+
                     <div class="option-row">
                         <label class="checkbox-container">
                             <input type="checkbox" class="checkbox" id="auto-save">
                             <span class="option-label">Auto-save generated passwords</span>
                         </label>
                     </div>
-                    
+
                     <div class="option-row">
                         <label class="checkbox-container">
                             <input type="checkbox" class="checkbox" id="clear-clipboard">
                             <span class="option-label">Clear clipboard after 30 seconds</span>
                         </label>
                     </div>
-                    
+
                     <div class="option-row">
                         <span class="option-label">Clipboard Clear Time (seconds)</span>
                         <div class="slider-container">
@@ -358,7 +363,7 @@
                             <input type="range" min="10" max="120" value="30" class="slider" id="clipboard-time-slider">
                         </div>
                     </div>
-                    
+
                     <div class="buttons" style="margin-top: 20px;">
                         <button class="btn" id="export-data">
                             <i class="fas fa-file-export"></i>
@@ -382,11 +387,10 @@
             </div>
             <div class="footer-links">
                 <a href="https://my-portfolio-eight-tau-petac50k54.vercel.app"
-   style="display:inline-block; padding:10px 18px; background:#007bff; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;"
-   onmouseover="this.style.background='#0056b3'"
-   onmouseout="this.style.background='#007bff'">
-   Click Me To Know Me
-</a>
+                    style="display:inline-block; padding:10px 18px; background:#007bff; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;"
+                    onmouseover="this.style.background='#0056b3'" onmouseout="this.style.background='#007bff'">
+                    Click Me To Know Me
+                </a>
 
             </div>
             <div class="footer-copyright">
@@ -394,7 +398,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Save Password Modal -->
     <div class="modal" id="save-modal">
         <div class="modal-content">
@@ -422,7 +426,7 @@
             </button>
         </div>
     </div>
-    
+
     <!-- Notification -->
     <div class="notification" id="notification">
         <i class="fas fa-check-circle"></i>
@@ -499,7 +503,7 @@
         const numberChars = '0123456789';
         const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
         const similarChars = '1lI0O';
-        
+
         // Word list for passphrases (simplified)
         const wordList = [
             'apple', 'banana', 'carrot', 'dolphin', 'elephant', 'flamingo', 'giraffe', 'honey', 'iguana', 'jaguar',
@@ -518,6 +522,24 @@
             clipboardTime: 30,
             theme: 'light'
         };
+
+        // Utility for secure random numbers
+        function getSecureRandom() {
+            const array = new Uint32Array(1);
+            window.crypto.getRandomValues(array);
+            return array[0] / (0xffffffff + 1);
+        }
+
+        // Utility to escape HTML and prevent XSS
+        function escapeHTML(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
 
         // Simulate loading
         function simulateLoading() {
@@ -545,7 +567,7 @@
             clearClipboardCheckbox.checked = settings.clearClipboard;
             clipboardTimeSlider.value = settings.clipboardTime;
             clipboardTimeValue.textContent = settings.clipboardTime;
-            
+
             // Set theme
             if (settings.theme === 'dark') {
                 body.classList.remove('light-theme');
@@ -608,11 +630,11 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const tabId = tab.getAttribute('data-tab');
-                
+
                 // Update active tab
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                
+
                 // Update active tab content
                 tabContents.forEach(content => {
                     content.classList.remove('active');
@@ -620,7 +642,7 @@
                         content.classList.add('active');
                     }
                 });
-                
+
                 // Generate content for active tab if needed
                 if (tabId === 'history') {
                     displayHistory();
@@ -641,7 +663,7 @@
 
         // Apply template settings
         function applyTemplate(template) {
-            switch(template) {
+            switch (template) {
                 case 'basic':
                     lengthSlider.value = 12;
                     lengthValue.textContent = '12';
@@ -690,7 +712,7 @@
             let length = parseInt(lengthSlider.value);
             let charSet = '';
             let password = '';
-            
+
             // Build character set based on selected options
             if (uppercaseCheckbox.checked) {
                 let uppercaseSet = uppercaseChars;
@@ -699,7 +721,7 @@
                 }
                 charSet += uppercaseSet;
             }
-            
+
             if (lowercaseCheckbox.checked) {
                 let lowercaseSet = lowercaseChars;
                 if (excludeSimilarCheckbox.checked) {
@@ -707,7 +729,7 @@
                 }
                 charSet += lowercaseSet;
             }
-            
+
             if (numbersCheckbox.checked) {
                 let numberSet = numberChars;
                 if (excludeSimilarCheckbox.checked) {
@@ -715,15 +737,15 @@
                 }
                 charSet += numberSet;
             }
-            
+
             if (symbolsCheckbox.checked) charSet += symbolChars;
-            
+
             // If no character set is selected, use lowercase as default
             if (charSet === '') {
                 charSet = lowercaseChars;
                 lowercaseCheckbox.checked = true;
             }
-            
+
             // Generate password with or without repeating characters
             if (noRepeatingCheckbox.checked) {
                 // Ensure we don't request more characters than available
@@ -733,18 +755,18 @@
                     lengthSlider.value = length;
                     lengthValue.textContent = length;
                 }
-                
+
                 // Shuffle the character set and take the first 'length' characters
                 const shuffledChars = shuffleString(charSet);
                 password = shuffledChars.substring(0, length);
             } else {
                 // Standard random generation
                 for (let i = 0; i < length; i++) {
-                    const randomIndex = Math.floor(Math.random() * charSet.length);
+                    const randomIndex = Math.floor(getSecureRandom() * charSet.length);
                     password += charSet[randomIndex];
                 }
             }
-            
+
             return password;
         }
 
@@ -752,37 +774,37 @@
         function generatePassphrase() {
             const wordCount = parseInt(wordCountSlider.value);
             let passphrase = '';
-            
+
             // Select random words
             for (let i = 0; i < wordCount; i++) {
-                const randomIndex = Math.floor(Math.random() * wordList.length);
+                const randomIndex = Math.floor(getSecureRandom() * wordList.length);
                 let word = wordList[randomIndex];
-                
+
                 // Capitalize if needed
                 if (capitalizeCheckbox.checked && i === 0) {
                     word = word.charAt(0).toUpperCase() + word.slice(1);
                 }
-                
+
                 passphrase += word;
-                
+
                 // Add separator (space) if not the last word
                 if (i < wordCount - 1) {
                     passphrase += ' ';
                 }
             }
-            
+
             // Add numbers if needed
             if (includeNumbersCheckbox.checked) {
-                const randomNum = Math.floor(Math.random() * 90) + 10; // 10-99
+                const randomNum = Math.floor(getSecureRandom() * 90) + 10; // 10-99
                 passphrase += randomNum;
             }
-            
+
             // Add symbols if needed
             if (includeSymbolsCheckbox.checked) {
-                const randomSymbol = symbolChars.charAt(Math.floor(Math.random() * symbolChars.length));
+                const randomSymbol = symbolChars.charAt(Math.floor(getSecureRandom() * symbolChars.length));
                 passphrase += randomSymbol;
             }
-            
+
             return passphrase;
         }
 
@@ -790,12 +812,12 @@
         function generatePasswordFromPattern() {
             const pattern = patternInput.value;
             let password = '';
-            
+
             for (let i = 0; i < pattern.length; i++) {
                 const charType = pattern.charAt(i);
                 let charSet = '';
-                
-                switch(charType) {
+
+                switch (charType) {
                     case 'L': // Any letter
                         charSet = uppercaseChars + lowercaseChars;
                         break;
@@ -816,11 +838,11 @@
                         password += charType;
                         continue;
                 }
-                
-                const randomIndex = Math.floor(Math.random() * charSet.length);
+
+                const randomIndex = Math.floor(getSecureRandom() * charSet.length);
                 password += charSet[randomIndex];
             }
-            
+
             return password;
         }
 
@@ -828,11 +850,11 @@
         function generateBatchPasswords() {
             const count = parseInt(batchCountInput.value);
             const passwords = [];
-            
+
             for (let i = 0; i < count; i++) {
                 passwords.push(generatePassword());
             }
-            
+
             return passwords;
         }
 
@@ -840,7 +862,7 @@
         function shuffleString(str) {
             const array = str.split('');
             for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
+                const j = Math.floor(getSecureRandom() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array.join('');
@@ -850,27 +872,27 @@
         function calculateStrength(password) {
             let strength = 0;
             const length = password.length;
-            
+
             // Length factor
             if (length >= 16) strength += 3;
             else if (length >= 12) strength += 2;
             else if (length >= 8) strength += 1;
-            
+
             // Character variety factors
             if (/[A-Z]/.test(password)) strength += 1;
             if (/[a-z]/.test(password)) strength += 1;
             if (/[0-9]/.test(password)) strength += 1;
             if (/[^A-Za-z0-9]/.test(password)) strength += 2;
-            
+
             // Calculate entropy
             let charsetSize = 0;
             if (/[A-Z]/.test(password)) charsetSize += 26;
             if (/[a-z]/.test(password)) charsetSize += 26;
             if (/[0-9]/.test(password)) charsetSize += 10;
             if (/[^A-Za-z0-9]/.test(password)) charsetSize += symbolChars.length;
-            
+
             const entropy = Math.log2(Math.pow(charsetSize, length));
-            
+
             return { strength, entropy };
         }
 
@@ -879,7 +901,7 @@
             const { strength, entropy } = calculateStrength(password);
             let strengthPercentage = 0;
             let strengthLabel = '';
-            
+
             if (strength <= 2) {
                 strengthPercentage = 25;
                 strengthLabel = 'Weak';
@@ -897,7 +919,7 @@
                 strengthLabel = 'Very Strong';
                 strengthFill.style.background = '#007aff';
             }
-            
+
             strengthFill.style.width = `${strengthPercentage}%`;
             strengthText.textContent = strengthLabel;
             entropyDisplay.textContent = `Entropy: ${entropy.toFixed(1)} bits`;
@@ -907,33 +929,37 @@
         function updateSecurityAudit() {
             const password = passwordDisplay.textContent;
             if (password === 'Click Generate') return;
-            
+
             const { strength } = calculateStrength(password);
             let score = 0;
-            
+
             // Calculate score based on strength factors
             if (password.length >= 12) score += 25;
             else if (password.length >= 8) score += 15;
-            
+
             if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score += 25;
             else if (/[A-Z]/.test(password) || /[a-z]/.test(password)) score += 15;
-            
+
             if (/[0-9]/.test(password)) score += 25;
             if (/[^A-Za-z0-9]/.test(password)) score += 25;
-            
+
             healthScore.textContent = `${score}%`;
         }
+
+        // Variables for timeout
+        let clipboardTimeout;
 
         // Copy password to clipboard
         function copyToClipboard(text) {
             if (!text || text === 'Click Generate') return;
-            
+
             navigator.clipboard.writeText(text).then(() => {
                 showNotification('Password copied to clipboard!');
-                
+
                 // Clear clipboard after specified time if enabled
                 if (settings.clearClipboard) {
-                    setTimeout(() => {
+                    clearTimeout(clipboardTimeout);
+                    clipboardTimeout = setTimeout(() => {
                         navigator.clipboard.writeText('').then(() => {
                             // Clipboard cleared
                         });
@@ -948,11 +974,11 @@
             passwordDisplay.textContent = password;
             updateStrengthMeter(password);
             updateSecurityAudit();
-            
+
             if (settings.autoCopy) {
                 copyToClipboard(password);
             }
-            
+
             if (settings.autoSave) {
                 savePasswordToHistory(password, 'Auto-saved password');
             }
@@ -962,7 +988,7 @@
         function generateAndDisplayPassphrase() {
             const passphrase = generatePassphrase();
             passphraseDisplay.textContent = passphrase;
-            
+
             if (settings.autoCopy) {
                 copyToClipboard(passphrase);
             }
@@ -972,7 +998,7 @@
         function generateAndDisplayPatternPassword() {
             const password = generatePasswordFromPattern();
             patternPasswordDisplay.textContent = password;
-            
+
             if (settings.autoCopy) {
                 copyToClipboard(password);
             }
@@ -982,22 +1008,23 @@
         function generateAndDisplayBatchPasswords() {
             const passwords = generateBatchPasswords();
             batchResults.innerHTML = '';
-            
+
             passwords.forEach((password, index) => {
                 const div = document.createElement('div');
                 div.className = 'batch-password';
+                const safePass = escapeHTML(password);
                 div.innerHTML = `
-                    <span>${password}</span>
-                    <button class="icon-btn copy-batch" data-password="${password}">
+                    <span>${safePass}</span>
+                    <button class="icon-btn copy-batch" data-password="${safePass}">
                         <i class="fas fa-copy"></i>
                     </button>
                 `;
                 batchResults.appendChild(div);
             });
-            
+
             // Add event listeners to batch copy buttons
             document.querySelectorAll('.copy-batch').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     const password = this.getAttribute('data-password');
                     copyToClipboard(password);
                 });
@@ -1023,18 +1050,18 @@
                 notes: notes,
                 date: new Date().toLocaleString()
             };
-            
+
             // Add to history
             passwordHistory.unshift(passwordObj);
-            
+
             // Save to localStorage (limit to 50 items)
             if (passwordHistory.length > 50) {
                 passwordHistory = passwordHistory.slice(0, 50);
             }
             localStorage.setItem('passwordHistory', JSON.stringify(passwordHistory));
-            
+
             showNotification('Password saved successfully!');
-            
+
             // Update history display if visible
             if (document.querySelector('#history-tab').classList.contains('active')) {
                 displayHistory();
@@ -1044,26 +1071,31 @@
         // Display password history
         function displayHistory() {
             historyList.innerHTML = '';
-            
+
             if (passwordHistory.length === 0) {
                 historyList.innerHTML = '<li class="history-empty">No saved passwords yet</li>';
                 return;
             }
-            
+
             passwordHistory.forEach(item => {
                 const li = document.createElement('li');
                 li.className = 'history-item';
-                
+
+                const safeName = escapeHTML(item.name);
+                const safePass = escapeHTML(item.password);
+                const safeUser = item.username ? escapeHTML(item.username) : '';
+                const safeNotes = item.notes ? escapeHTML(item.notes) : '';
+
                 li.innerHTML = `
                     <div>
-                        <div style="font-weight: 600; margin-bottom: 5px;">${item.name}</div>
-                        <div class="history-password">${item.password}</div>
-                        ${item.username ? `<div style="font-size: 12px; margin-top: 3px;">${item.username}</div>` : ''}
-                        ${item.notes ? `<div style="font-size: 12px; margin-top: 3px;">${item.notes}</div>` : ''}
+                        <div style="font-weight: 600; margin-bottom: 5px;">${safeName}</div>
+                        <div class="history-password">${safePass}</div>
+                        ${safeUser ? `<div style="font-size: 12px; margin-top: 3px;">${safeUser}</div>` : ''}
+                        ${safeNotes ? `<div style="font-size: 12px; margin-top: 3px;">${safeNotes}</div>` : ''}
                         <div style="font-size: 10px; margin-top: 5px;">${item.date}</div>
                     </div>
                     <div class="history-actions">
-                        <button class="icon-btn copy-history" data-password="${item.password}" title="Copy password">
+                        <button class="icon-btn copy-history" data-password="${safePass}" title="Copy password">
                             <i class="fas fa-copy"></i>
                         </button>
                         <button class="icon-btn delete-history" data-id="${item.id}" title="Delete password">
@@ -1071,20 +1103,20 @@
                         </button>
                     </div>
                 `;
-                
+
                 historyList.appendChild(li);
             });
-            
+
             // Add event listeners to history items
             document.querySelectorAll('.copy-history').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     const password = this.getAttribute('data-password');
                     copyToClipboard(password);
                 });
             });
-            
+
             document.querySelectorAll('.delete-history').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     const id = parseInt(this.getAttribute('data-id'));
                     passwordHistory = passwordHistory.filter(item => item.id !== id);
                     localStorage.setItem('passwordHistory', JSON.stringify(passwordHistory));
@@ -1111,7 +1143,7 @@
                 showNotification('Generate a password first!');
                 return;
             }
-            
+
             // Show save modal
             saveModal.classList.add('show');
         }
@@ -1122,14 +1154,14 @@
             const name = passwordName.value.trim() || 'Unnamed Password';
             const username = passwordUsername.value.trim();
             const notes = passwordNotes.value.trim();
-            
+
             if (!password || password === 'Click Generate') {
                 showNotification('No password to save!');
                 return;
             }
-            
+
             savePasswordToHistory(password, name, username, notes);
-            
+
             // Close modal and reset form
             saveModal.classList.remove('show');
             passwordName.value = '';
@@ -1144,10 +1176,10 @@
                 settings: settings,
                 exportDate: new Date().toISOString()
             };
-            
+
             const dataStr = JSON.stringify(data, null, 2);
             const dataBlob = new Blob([dataStr], { type: 'application/json' });
-            
+
             const url = URL.createObjectURL(dataBlob);
             const link = document.createElement('a');
             link.href = url;
@@ -1156,7 +1188,7 @@
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
-            
+
             showNotification('Data exported successfully!');
         }
 
@@ -1165,36 +1197,36 @@
             const input = document.createElement('input');
             input.type = 'file';
             input.accept = 'application/json';
-            
+
             input.onchange = e => {
                 const file = e.target.files[0];
                 const reader = new FileReader();
-                
+
                 reader.onload = event => {
                     try {
                         const data = JSON.parse(event.target.result);
-                        
+
                         if (data.passwords) {
                             passwordHistory = data.passwords;
                             localStorage.setItem('passwordHistory', JSON.stringify(passwordHistory));
                         }
-                        
+
                         if (data.settings) {
                             settings = data.settings;
                             localStorage.setItem('passwordGeneratorSettings', JSON.stringify(settings));
                             initializeSettings();
                         }
-                        
+
                         showNotification('Data imported successfully!');
                         displayHistory();
                     } catch (error) {
                         showNotification('Error importing data: Invalid file format');
                     }
                 };
-                
+
                 reader.readAsText(file);
             };
-            
+
             input.click();
         }
 
@@ -1249,4 +1281,5 @@
         initialize();
     </script>
 </body>
+
 </html>
